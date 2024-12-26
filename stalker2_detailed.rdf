@@ -1,0 +1,62 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix wiki: <https://uk.wikipedia.org/wiki/S.T.A.L.K.E.R._2:_%D0%A1%D0%B5%D1%80%D1%86%D0%B5_%D0%A7%D0%BE%D1%80%D0%BD%D0%BE%D0%B1%D0%B8%D0%BB%D1%8F#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+wiki:Tool a rdfs:Class ;
+    dc:description "Інструмент, використовуваний у грі для різних завдань." ;
+    dc:title "Tool" ;
+    rdfs:subClassOf wiki:GameItem .
+
+wiki:Artifact a wiki:GameItem ;
+    wiki:description "Унікальний об'єкт, який можна знайти в зоні відчуження." ;
+    wiki:name "Артефакт" ;
+    wiki:usedIn wiki:Game .
+
+wiki:Character1 a wiki:GameCharacter ;
+    wiki:appearsIn wiki:Game ;
+    wiki:name "Майор Дегтярьов" ;
+    wiki:role "Протагоніст" .
+
+wiki:Detector a wiki:Tool ;
+    wiki:description "Пристрій для виявлення аномалій." ;
+    wiki:name "Детектор" ;
+    wiki:usedIn wiki:Game .
+
+wiki:GSCGameWorld a wiki:Developer ;
+    dc:description "Розробник відеоігор серії S.T.A.L.K.E.R." ;
+    dc:title "GSC Game World" .
+
+wiki:Singleplayer a wiki:GameMode ;
+    dc:description "Режим гри для одного гравця." ;
+    dc:title "Singleplayer" .
+
+wiki:Steam a wiki:Platform ;
+    dc:description "Онлайн-платформа для розповсюдження ігор." ;
+    dc:title "Steam" .
+
+wiki:Survival a wiki:Genre ;
+    dc:description "Жанр відеоігор, зосереджений на виживанні." ;
+    dc:title "Survival" .
+
+wiki:GameMap a wiki:GameMap ;
+    wiki:name "Зона Відчуження" ;
+    wiki:size "5km x 5km" ;
+    wiki:usedIn wiki:Game .
+
+wiki:Paragraph1 a wiki:Paragraph ;
+    wiki:content "Гравці досліджують зону відчуження, борються з аномаліями, збирають артефакти." .
+
+wiki:Section1 a wiki:Section ;
+    wiki:hasParagraph wiki:Paragraph1 ;
+    wiki:title "Геймплей" .
+
+wiki:Game a wiki:Article ;
+    wiki:hasSection wiki:Section1 ;
+    dc:creator "Wikipedia Contributors" ;
+    dc:date "2024-12-25" ;
+    dc:description "Майбутня відеогра в жанрі шутер від першої особи." ;
+    dc:subject "Відеогра, Шутер, Постапокаліпсис" ;
+    dc:title "S.T.A.L.K.E.R. 2: Серце Чорнобиля" .
+
+wiki:Artifact a wiki:GameItem .
+wiki:Detector a wiki:Tool .
